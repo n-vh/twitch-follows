@@ -1,0 +1,56 @@
+@import './reset.scss';
+@import './colors.scss';
+@import './skeleton.scss';
+
+@font-face {
+  font-family: Inter;
+  src: url(./fonts/Inter.woff2);
+}
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background-color: $background-color;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter;
+  gap: 24px;
+  margin: 0px auto 40px;
+  max-width: 1020px;
+  width: 100%;
+}
+
+* > a {
+  text-decoration: none;
+  color: $text-color;
+  word-wrap: break-word;
+}
+
+* > span,
+* > input {
+  letter-spacing: 0.02rem;
+}
+
+@media screen and (max-width: 540px) {
+  body {
+    max-width: 240px;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 800px) {
+  body {
+    max-width: 500px;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1060px) {
+  body {
+    max-width: 760px;
+  }
+}
